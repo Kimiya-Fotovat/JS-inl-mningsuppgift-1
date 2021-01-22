@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container border border-secondary border border-2 pb-3 my-4">
+
+    <form>
+      <section class="registerform">
+        <p></p>
+        <div class="row" id="form">
+          <div class="col-md-4">
+            <label class="form-label">First name</label>
+            <input type="text" class="form-control" id="firstname" value="">
+            <p class="text-error" id="firstname_error"></p>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastname" value="">
+            <p class="text-error" id="lastname_error"></p>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" value="">
+              <p class="text-error" id="email_error"></p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="d-flex justify-content-end pt-3" id="btn-container">
+        <button class="btn btn-success" id="submit" type="button">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+  <div class="container border border-secondary border border-2 pb-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th id="first" scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="table">
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
