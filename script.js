@@ -131,16 +131,23 @@ function validator() {
         lastname_error.innerText = '';
     }
 
-    if (email.value == '' || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value)) {
+    
+
+    var newEmail = email.value;
+    var emailfinder = users.find(({email}) => email === newEmail);
+        if (emailfinder){
+            email_error.innerText = 'this email address is already registered';
+            err = true;
+        }else if (email.value == '' || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value)) {
+                email_error.innerText = 'Please enter a validate email';
+                err = true;
+        } else {
         
-        email_error.innerText = 'Please enter a validate email';
-        err = true;
-    }else {
-        email_error.innerText = '';
-    }
+            email_error.innerText = '';
+        }
 
     return err;
-
+    
 
 }
 
